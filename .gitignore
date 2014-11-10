@@ -40,3 +40,4 @@ Icon
 .settings/
 .externalToolBuilders
 target/
+log/
