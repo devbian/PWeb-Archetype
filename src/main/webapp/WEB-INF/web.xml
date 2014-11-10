@@ -3,6 +3,7 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
 	id="PJWT" version="3.1">
 	<display-name>PJWT</display-name>
+	<!-- 防止jetty运行时，无法修改静态文件 -->
 	<servlet>
 		<servlet-name>default</servlet-name>
 		<init-param>
@@ -10,6 +11,7 @@
 			<param-value>false</param-value>
 		</init-param>
 	</servlet>
+	
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
@@ -17,7 +19,7 @@
 			classpath*:/applicationContext-shiro.xml
 		</param-value>
 	</context-param>
-
+	
 	<!-- 加载环境配置 -->
 	<context-param>
 		<param-name>spring.profiles.default</param-name>
