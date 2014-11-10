@@ -20,6 +20,10 @@ public final class default_jsp extends org.apache.jasper.runtime.HttpJspBase
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_set_var_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sitemesh_title_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sitemesh_head_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_shiro_guest;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_shiro_user;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_shiro_principal_property_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_shiro_hasRole_name;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sitemesh_body_nobody;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
@@ -32,6 +36,10 @@ public final class default_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_tagPool_c_set_var_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_sitemesh_title_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_sitemesh_head_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_shiro_guest = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_shiro_user = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_shiro_principal_property_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_shiro_hasRole_name = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_sitemesh_body_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
@@ -39,6 +47,10 @@ public final class default_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_tagPool_c_set_var_value_nobody.release();
     _jspx_tagPool_sitemesh_title_nobody.release();
     _jspx_tagPool_sitemesh_head_nobody.release();
+    _jspx_tagPool_shiro_guest.release();
+    _jspx_tagPool_shiro_user.release();
+    _jspx_tagPool_shiro_principal_property_nobody.release();
+    _jspx_tagPool_shiro_hasRole_name.release();
     _jspx_tagPool_sitemesh_body_nobody.release();
   }
 
@@ -126,91 +138,62 @@ public final class default_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       if (_jspx_meth_c_set_2(_jspx_page_context))
         return;
       out.write("\n");
       out.write("<div id=\"header\">\n");
-      out.write("\t<div id=\"title\">\n");
+      out.write("\t<div id=\"title\" class=\"container\">\n");
       out.write("\t\t<nav class=\"navbar navbar-default\" role=\"navigation\">\n");
-      out.write("  <div class=\"container-fluid\">\n");
-      out.write("    <!-- Brand and toggle get grouped for better mobile display -->\n");
-      out.write("    <div class=\"navbar-header\">\n");
-      out.write("      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n");
-      out.write("        <span class=\"sr-only\">Toggle navigation</span>\n");
-      out.write("        <span class=\"icon-bar\"></span>\n");
-      out.write("        <span class=\"icon-bar\"></span>\n");
-      out.write("        <span class=\"icon-bar\"></span>\n");
-      out.write("      </button>\n");
-      out.write("      <a class=\"navbar-brand\" href=\"#\">Brand</a>\n");
-      out.write("    </div>\n");
+      out.write("\t\t\t<div class=\"container-fluid\">\n");
+      out.write("\t\t\t\t<!-- Brand and toggle get grouped for better mobile display -->\n");
+      out.write("\t\t\t\t<div class=\"navbar-header\">\n");
+      out.write("\t\t\t\t\t<button type=\"button\" class=\"navbar-toggle collapsed\"\n");
+      out.write("\t\t\t\t\t\tdata-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n");
+      out.write("\t\t\t\t\t\t<span class=\"sr-only\">Toggle navigation</span> <span\n");
+      out.write("\t\t\t\t\t\t\tclass=\"icon-bar\"></span> <span class=\"icon-bar\"></span> <span\n");
+      out.write("\t\t\t\t\t\t\tclass=\"icon-bar\"></span>\n");
+      out.write("\t\t\t\t\t</button>\n");
+      out.write("\t\t\t\t\t<a class=\"navbar-brand\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\">模板</a>\n");
+      out.write("\t\t\t\t</div>\n");
       out.write("\n");
-      out.write("    <!-- Collect the nav links, forms, and other content for toggling -->\n");
-      out.write("    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n");
-      out.write("      <ul class=\"nav navbar-nav\">\n");
-      out.write("        <li class=\"active\"><a href=\"#\">Link</a></li>\n");
-      out.write("        <li><a href=\"#\">Link</a></li>\n");
-      out.write("        <li class=\"dropdown\">\n");
-      out.write("          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <span class=\"caret\"></span></a>\n");
-      out.write("          <ul class=\"dropdown-menu\" role=\"menu\">\n");
-      out.write("            <li><a href=\"#\">Action</a></li>\n");
-      out.write("            <li><a href=\"#\">Another action</a></li>\n");
-      out.write("            <li><a href=\"#\">Something else here</a></li>\n");
-      out.write("            <li class=\"divider\"></li>\n");
-      out.write("            <li><a href=\"#\">Separated link</a></li>\n");
-      out.write("            <li class=\"divider\"></li>\n");
-      out.write("            <li><a href=\"#\">One more separated link</a></li>\n");
-      out.write("          </ul>\n");
-      out.write("        </li>\n");
-      out.write("      </ul>\n");
-      out.write("      <form class=\"navbar-form navbar-left\" role=\"search\">\n");
-      out.write("        <div class=\"form-group\">\n");
-      out.write("          <input type=\"text\" class=\"form-control\" placeholder=\"Search\">\n");
-      out.write("        </div>\n");
-      out.write("        <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n");
-      out.write("      </form>\n");
-      out.write("      <ul class=\"nav navbar-nav navbar-right\">\n");
-      out.write("        <li><a href=\"#\">Link</a></li>\n");
-      out.write("        <li class=\"dropdown\">\n");
-      out.write("          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <span class=\"caret\"></span></a>\n");
-      out.write("          <ul class=\"dropdown-menu\" role=\"menu\">\n");
-      out.write("            <li><a href=\"#\">Action</a></li>\n");
-      out.write("            <li><a href=\"#\">Another action</a></li>\n");
-      out.write("            <li><a href=\"#\">Something else here</a></li>\n");
-      out.write("            <li class=\"divider\"></li>\n");
-      out.write("            <li><a href=\"#\">Separated link</a></li>\n");
-      out.write("          </ul>\n");
-      out.write("        </li>\n");
-      out.write("      </ul>\n");
-      out.write("    </div><!-- /.navbar-collapse -->\n");
-      out.write("  </div><!-- /.container-fluid -->\n");
-      out.write("</nav>\n");
-      out.write("\t    <h1><a href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\">KDarwin</a>\n");
-      out.write("\t    <!-- \n");
-      out.write("\t    <shiro:user>\n");
-      out.write("\t\t\t<div class=\"btn-group pull-right\">\n");
-      out.write("\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\n");
-      out.write("\t\t\t\t\t<i class=\"icon-user\"></i> <shiro:principal property=\"name\"/>\n");
-      out.write("\t\t\t\t\t<span class=\"caret\"></span>\n");
-      out.write("\t\t\t\t</a>\n");
-      out.write("\t\t\t\n");
-      out.write("\t\t\t\t<ul class=\"dropdown-menu\">\n");
-      out.write("\t\t\t\t\t<shiro:hasRole name=\"admin\">\n");
-      out.write("\t\t\t\t\t\t<li><a href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/admin/user\">Admin Users</a></li>\n");
-      out.write("\t\t\t\t\t\t<li class=\"divider\"></li>\n");
-      out.write("\t\t\t\t\t</shiro:hasRole>\n");
-      out.write("\t\t\t\t\t<li><a href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/profile\">Edit Profile</a></li>\n");
-      out.write("\t\t\t\t\t<li><a href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/logout\">Logout</a></li>\n");
-      out.write("\t\t\t\t</ul>\n");
+      out.write("\t\t\t\t<!-- Collect the nav links, forms, and other content for toggling -->\n");
+      out.write("\t\t\t\t<div class=\"collapse navbar-collapse\"\n");
+      out.write("\t\t\t\t\tid=\"bs-example-navbar-collapse-1\">\n");
+      out.write("\t\t\t\t\t<ul class=\"nav navbar-nav\">\n");
+      out.write("\t\t\t\t\t\t<li class=\"active\"><a href=\"#\">Link</a></li>\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"#\">Link</a></li>\n");
+      out.write("\t\t\t\t\t</ul>\n");
+      out.write("\t\t\t\t\t<form class=\"navbar-form navbar-left\" role=\"search\">\n");
+      out.write("\t\t\t\t\t\t<div class=\"form-group\">\n");
+      out.write("\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" placeholder=\"Search\">\n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-default\">Submit</button>\n");
+      out.write("\t\t\t\t\t</form>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t");
+      if (_jspx_meth_shiro_guest_0(_jspx_page_context))
+        return;
+      out.write("\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t");
+      if (_jspx_meth_shiro_user_0(_jspx_page_context))
+        return;
+      out.write("\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t\t<!-- /.navbar-collapse -->\n");
       out.write("\t\t\t</div>\n");
-      out.write("\t\t</shiro:user>\n");
+      out.write("\t\t\t<!-- /.container-fluid -->\n");
+      out.write("\t\t</nav>\n");
+      out.write("\t\t<!-- \n");
+      out.write("\t\t<h1>\n");
+      out.write("\t    ");
+      if (_jspx_meth_shiro_user_1(_jspx_page_context))
+        return;
+      out.write("\n");
       out.write("\t\t -->\n");
       out.write("\t\t</h1>\n");
       out.write("\t</div>\n");
@@ -224,8 +207,8 @@ public final class default_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t</div>\n");
       out.write("\t\t\t");
       out.write("\n");
-      out.write("<div id=\"footer\">\n");
-      out.write("\tCopyright &copy; 2005-2012 <a href=\"#\">KDarwin</a>\n");
+      out.write("<div class=\"container\" id=\"footer\">\n");
+      out.write("\t<p>&copy; Company 2014</p>\n");
       out.write("</div>\n");
       out.write("\n");
       out.write("\n");
@@ -336,6 +319,198 @@ public final class default_jsp extends org.apache.jasper.runtime.HttpJspBase
       return true;
     }
     _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_2);
+    return false;
+  }
+
+  private boolean _jspx_meth_shiro_guest_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  shiro:guest
+    org.apache.shiro.web.tags.GuestTag _jspx_th_shiro_guest_0 = (org.apache.shiro.web.tags.GuestTag) _jspx_tagPool_shiro_guest.get(org.apache.shiro.web.tags.GuestTag.class);
+    _jspx_th_shiro_guest_0.setPageContext(_jspx_page_context);
+    _jspx_th_shiro_guest_0.setParent(null);
+    int _jspx_eval_shiro_guest_0 = _jspx_th_shiro_guest_0.doStartTag();
+    if (_jspx_eval_shiro_guest_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("\t\t\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">\n");
+        out.write("\t\t\t\t\t\t\t<li><a href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("/login\">登录</a></li>\n");
+        out.write("\t\t\t\t\t\t\t<li class=\"dropdown\"><a href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("/register\">注册</a></li>\n");
+        out.write("\t\t\t\t\t\t</ul>\n");
+        out.write("\t\t\t\t\t");
+        int evalDoAfterBody = _jspx_th_shiro_guest_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_shiro_guest_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_shiro_guest.reuse(_jspx_th_shiro_guest_0);
+      return true;
+    }
+    _jspx_tagPool_shiro_guest.reuse(_jspx_th_shiro_guest_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_shiro_user_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  shiro:user
+    org.apache.shiro.web.tags.UserTag _jspx_th_shiro_user_0 = (org.apache.shiro.web.tags.UserTag) _jspx_tagPool_shiro_user.get(org.apache.shiro.web.tags.UserTag.class);
+    _jspx_th_shiro_user_0.setPageContext(_jspx_page_context);
+    _jspx_th_shiro_user_0.setParent(null);
+    int _jspx_eval_shiro_user_0 = _jspx_th_shiro_user_0.doStartTag();
+    if (_jspx_eval_shiro_user_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("\n");
+        out.write("\t\t\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">\n");
+        out.write("\t\t\t\t\t\t\t<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\"\n");
+        out.write("\t\t\t\t\t\t\t\tdata-toggle=\"dropdown\">欢迎您 ");
+        if (_jspx_meth_shiro_principal_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_shiro_user_0, _jspx_page_context))
+          return true;
+        out.write("<span class=\"caret\"></span></a>\n");
+        out.write("\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" role=\"menu\">\n");
+        out.write("\t\t\t\t\t\t\t\t\t<li><a href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("/profile\">编辑个人信息</a></li>\n");
+        out.write("\t\t\t\t\t\t\t\t\t<li><a href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("/logout\">退出</a></li>\n");
+        out.write("\t\t\t\t\t\t\t\t</ul></li>\n");
+        out.write("\n");
+        out.write("\t\t\t\t\t\t</ul>\n");
+        out.write("\t\t\t\t\t");
+        int evalDoAfterBody = _jspx_th_shiro_user_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_shiro_user_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_shiro_user.reuse(_jspx_th_shiro_user_0);
+      return true;
+    }
+    _jspx_tagPool_shiro_user.reuse(_jspx_th_shiro_user_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_shiro_principal_0(javax.servlet.jsp.tagext.JspTag _jspx_th_shiro_user_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  shiro:principal
+    org.apache.shiro.web.tags.PrincipalTag _jspx_th_shiro_principal_0 = (org.apache.shiro.web.tags.PrincipalTag) _jspx_tagPool_shiro_principal_property_nobody.get(org.apache.shiro.web.tags.PrincipalTag.class);
+    _jspx_th_shiro_principal_0.setPageContext(_jspx_page_context);
+    _jspx_th_shiro_principal_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_shiro_user_0);
+    _jspx_th_shiro_principal_0.setProperty("name");
+    int _jspx_eval_shiro_principal_0 = _jspx_th_shiro_principal_0.doStartTag();
+    if (_jspx_th_shiro_principal_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_shiro_principal_property_nobody.reuse(_jspx_th_shiro_principal_0);
+      return true;
+    }
+    _jspx_tagPool_shiro_principal_property_nobody.reuse(_jspx_th_shiro_principal_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_shiro_user_1(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  shiro:user
+    org.apache.shiro.web.tags.UserTag _jspx_th_shiro_user_1 = (org.apache.shiro.web.tags.UserTag) _jspx_tagPool_shiro_user.get(org.apache.shiro.web.tags.UserTag.class);
+    _jspx_th_shiro_user_1.setPageContext(_jspx_page_context);
+    _jspx_th_shiro_user_1.setParent(null);
+    int _jspx_eval_shiro_user_1 = _jspx_th_shiro_user_1.doStartTag();
+    if (_jspx_eval_shiro_user_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("\t\t\t<div class=\"btn-group pull-right\">\n");
+        out.write("\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\n");
+        out.write("\t\t\t\t\t<i class=\"icon-user\"></i> ");
+        if (_jspx_meth_shiro_principal_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_shiro_user_1, _jspx_page_context))
+          return true;
+        out.write("\n");
+        out.write("\t\t\t\t\t<span class=\"caret\"></span>\n");
+        out.write("\t\t\t\t</a>\n");
+        out.write("\t\t\t\n");
+        out.write("\t\t\t\t<ul class=\"dropdown-menu\">\n");
+        out.write("\t\t\t\t\t");
+        if (_jspx_meth_shiro_hasRole_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_shiro_user_1, _jspx_page_context))
+          return true;
+        out.write("\n");
+        out.write("\t\t\t\t\t<li><a href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("/profile\">Edit Profile</a></li>\n");
+        out.write("\t\t\t\t\t<li><a href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("/logout\">Logout</a></li>\n");
+        out.write("\t\t\t\t</ul>\n");
+        out.write("\t\t\t</div>\n");
+        out.write("\t\t");
+        int evalDoAfterBody = _jspx_th_shiro_user_1.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_shiro_user_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_shiro_user.reuse(_jspx_th_shiro_user_1);
+      return true;
+    }
+    _jspx_tagPool_shiro_user.reuse(_jspx_th_shiro_user_1);
+    return false;
+  }
+
+  private boolean _jspx_meth_shiro_principal_1(javax.servlet.jsp.tagext.JspTag _jspx_th_shiro_user_1, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  shiro:principal
+    org.apache.shiro.web.tags.PrincipalTag _jspx_th_shiro_principal_1 = (org.apache.shiro.web.tags.PrincipalTag) _jspx_tagPool_shiro_principal_property_nobody.get(org.apache.shiro.web.tags.PrincipalTag.class);
+    _jspx_th_shiro_principal_1.setPageContext(_jspx_page_context);
+    _jspx_th_shiro_principal_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_shiro_user_1);
+    _jspx_th_shiro_principal_1.setProperty("name");
+    int _jspx_eval_shiro_principal_1 = _jspx_th_shiro_principal_1.doStartTag();
+    if (_jspx_th_shiro_principal_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_shiro_principal_property_nobody.reuse(_jspx_th_shiro_principal_1);
+      return true;
+    }
+    _jspx_tagPool_shiro_principal_property_nobody.reuse(_jspx_th_shiro_principal_1);
+    return false;
+  }
+
+  private boolean _jspx_meth_shiro_hasRole_0(javax.servlet.jsp.tagext.JspTag _jspx_th_shiro_user_1, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  shiro:hasRole
+    org.apache.shiro.web.tags.HasRoleTag _jspx_th_shiro_hasRole_0 = (org.apache.shiro.web.tags.HasRoleTag) _jspx_tagPool_shiro_hasRole_name.get(org.apache.shiro.web.tags.HasRoleTag.class);
+    _jspx_th_shiro_hasRole_0.setPageContext(_jspx_page_context);
+    _jspx_th_shiro_hasRole_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_shiro_user_1);
+    _jspx_th_shiro_hasRole_0.setName("admin");
+    int _jspx_eval_shiro_hasRole_0 = _jspx_th_shiro_hasRole_0.doStartTag();
+    if (_jspx_eval_shiro_hasRole_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("\t\t\t\t\t\t<li><a href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("/admin/user\">Admin Users</a></li>\n");
+        out.write("\t\t\t\t\t\t<li class=\"divider\"></li>\n");
+        out.write("\t\t\t\t\t");
+        int evalDoAfterBody = _jspx_th_shiro_hasRole_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_shiro_hasRole_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_shiro_hasRole_name.reuse(_jspx_th_shiro_hasRole_0);
+      return true;
+    }
+    _jspx_tagPool_shiro_hasRole_name.reuse(_jspx_th_shiro_hasRole_0);
     return false;
   }
 

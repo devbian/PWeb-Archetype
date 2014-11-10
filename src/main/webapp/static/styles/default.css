@@ -1,20 +1,43 @@
-/* header */
-#header {margin-bottom:15px;}
-
-#header h1 a {
-	color: #658A16;
-	text-decoration: none
+*{
+	font-family:Tahoma,Arial,Roboto,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC","Hiragino Sans GB",Simsun,sans-self;
 }
 
-#header h1 small {color: #BACE87;}
-
-/* footer */
-#footer {
-	margin-top: 15px;
-	padding: 15px 0px 0px 0px;
-	font-size: 95%;
-	text-align: center;
-	border-top: 2px solid #658A16;
+#footer{
+	border-top:1px solid gray;
+	margin-top:20px;
+	padding-top:10px;
 }
 
-#footer a {color: #999;}
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin input{
+	margin-bottom:10px;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}

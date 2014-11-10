@@ -32,7 +32,7 @@
 		<div class="container">
 			<%@ include file="/WEB-INF/layouts/header.jsp"%>
 			<div id="content">
-				<sitemesh:body/>
+				<sitemesh:body />
 			</div>
 			<%@ include file="/WEB-INF/layouts/footer.jsp"%>
 		</div>

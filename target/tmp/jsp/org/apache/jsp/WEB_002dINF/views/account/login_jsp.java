@@ -65,58 +65,54 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
-      out.write("\t<title>登录页</title>\n");
+      out.write("<title>登录页</title>\n");
       out.write("</head>\n");
       out.write("\n");
       out.write("<body>\n");
-      out.write("\t<form id=\"loginForm\" action=\"");
-      out.write("${ctx}");
-      out.write("/login\" method=\"post\" class=\"form-horizontal\">\n");
-      out.write("\t");
-
-	String error = (String) request.getAttribute(FormAuthenticationFilter.DEFAULT_ERROR_KEY_ATTRIBUTE_NAME);
-	if(error != null){
-	
-      out.write("\n");
-      out.write("\t\t<div class=\"alert alert-error input-medium controls\">\n");
-      out.write("\t\t\t<button class=\"close\" data-dismiss=\"alert\">×</button>登录失败，请重试.\n");
-      out.write("\t\t</div>\n");
-      out.write("\t");
-
-	}
-	
-      out.write("\n");
-      out.write("\t\t<div class=\"control-group\">\n");
-      out.write("\t\t\t<label for=\"username\" class=\"control-label\">名称:</label>\n");
-      out.write("\t\t\t<div class=\"controls\">\n");
-      out.write("\t\t\t\t<input type=\"text\" id=\"username\" name=\"username\"  value=\"");
-      out.write("${username}");
-      out.write("\" class=\"input-medium required\"/>\n");
-      out.write("\t\t\t</div>\n");
-      out.write("\t\t</div>\n");
-      out.write("\t\t<div class=\"control-group\">\n");
-      out.write("\t\t\t<label for=\"password\" class=\"control-label\">密码:</label>\n");
-      out.write("\t\t\t<div class=\"controls\">\n");
-      out.write("\t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" class=\"input-medium required\"/>\n");
-      out.write("\t\t\t</div>\n");
-      out.write("\t\t</div>\n");
-      out.write("\t\t\t\t\n");
-      out.write("\t\t<div class=\"control-group\">\n");
-      out.write("\t\t\t<div class=\"controls\">\n");
-      out.write("\t\t\t\t<label class=\"checkbox\" for=\"rememberMe\"><input type=\"checkbox\" id=\"rememberMe\" name=\"rememberMe\"/> 记住我</label>\n");
-      out.write("\t\t\t\t<input id=\"submit_btn\" class=\"btn btn-primary\" type=\"submit\" value=\"登录\"/> <a class=\"btn\" href=\"");
-      out.write("${ctx}");
-      out.write("/register\">注册</a>\n");
-      out.write("\t\t\t \t<span class=\"help-block\">(管理员: <b>admin/admin</b>, 普通用户: <b>user/user</b>)</span>\n");
-      out.write("\t\t\t</div>\n");
-      out.write("\t\t</div>\n");
-      out.write("\t</form>\n");
+      out.write("\t\n");
       out.write("\n");
       out.write("\t<script>\n");
       out.write("\t\t$(document).ready(function() {\n");
       out.write("\t\t\t$(\"#loginForm\").validate();\n");
       out.write("\t\t});\n");
       out.write("\t</script>\n");
+      out.write("\n");
+      out.write("\t<div class=\"container\">\n");
+      out.write("\t\t<form class=\"form-signin\" role=\"form\" id=\"loginForm\"\n");
+      out.write("\t\t\taction=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/login\" method=\"post\">\n");
+      out.write("\t\t\t");
+
+				String error = (String) request.getAttribute(FormAuthenticationFilter.DEFAULT_ERROR_KEY_ATTRIBUTE_NAME);
+				if (error != null) {
+			
+      out.write("\n");
+      out.write("\t\t\t<div class=\"alert alert-error input-medium controls\">\n");
+      out.write("\t\t\t\t<button class=\"close\" data-dismiss=\"alert\">×</button>\n");
+      out.write("\t\t\t\t登录失败，请重试.\n");
+      out.write("\t\t\t</div>\n");
+      out.write("\t\t\t");
+
+				}
+			
+      out.write("\n");
+      out.write("\t\t\t<h2 class=\"form-signin-heading\">请登录</h2>\n");
+      out.write("\t\t\t<input type=\"text\" class=\"form-control\" placeholder=\"名称\" required\n");
+      out.write("\t\t\t\tautofocus name=\"username\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\"> \n");
+      out.write("\t\t\t<input type=\"password\" class=\"form-control\"\n");
+      out.write("\t\t\t\tplaceholder=\"密码\" required  name=\"password\">\n");
+      out.write("\t\t\t<div class=\"checkbox\">\n");
+      out.write("\t\t\t\t<label>\n");
+      out.write("\t\t\t\t\t<input type=\"checkbox\" value=\"remember-me\"> 记住我\n");
+      out.write("\t\t\t\t</label>\n");
+      out.write("\t\t\t</div>\n");
+      out.write("\t\t\t<button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">登录</button>\n");
+      out.write("\t\t</form>\n");
+      out.write("\t</div>\n");
+      out.write("\t<!-- /container -->\n");
       out.write("</body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
@@ -141,7 +137,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_c_set_0.setPageContext(_jspx_page_context);
     _jspx_th_c_set_0.setParent(null);
     _jspx_th_c_set_0.setVar("ctx");
-    _jspx_th_c_set_0.setValue(new String("${pageContext.request.contextPath}"));
+    _jspx_th_c_set_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_set_0 = _jspx_th_c_set_0.doStartTag();
     if (_jspx_th_c_set_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_0);
